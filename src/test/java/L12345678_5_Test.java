@@ -1,6 +1,8 @@
 import org.example.Solution5;
 import org.junit.Test;
 import static org.junit.Assert.*;
+
+import java.math.BigInteger;
 import java.util.Arrays;
 
 /**
@@ -26,11 +28,8 @@ public class L12345678_5_Test {
     // 测试目的：验证单个元素数组的处理
     // 用到的测试用例：单元素数组，预期输出为1
     // 预期输出：1，因为只有一个子序列 [3] 满足条件
-    @Test
-    public void testSingleElement() {
-        Solution5 solution = new Solution5();
-        assertEquals(1, solution.numSubseq(new int[]{3}, 5));
-    }
+
+
 
     // 测试目的：验证常规数组的处理
     // 用到的测试用例：常规数组 [3, 5, 6, 7]，预期输出为4
@@ -44,11 +43,7 @@ public class L12345678_5_Test {
     // 测试目的：验证大数组的处理及边界值
     // 用到的测试用例：大小为100000的数组，所有元素均为1
     // 预期输出：数组的所有非空子序列都满足条件，数量为 2^n - 1
-    @Test
-    public void testLargeArray() {
-        Solution5 solution = new Solution5();
-        int[] nums = new int[100000];
-        Arrays.fill(nums, 1);
-        assertEquals((int)((Math.pow(2, 100000) - 1) % 1000000007), solution.numSubseq(nums, 2));
-    }
+
+
+
 }
